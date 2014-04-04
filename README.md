@@ -20,7 +20,6 @@ This app provides a simple form asking for a few personnal pieces of information
 
 This application is build on top of :
 
-    "lodash": "~2.4.1",
 - Backbone 1.1.0
 - Lodash 2.4.1
 - jQuery 2.0.3
