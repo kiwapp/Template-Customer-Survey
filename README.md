@@ -1,7 +1,7 @@
 Template_Customer_Survey
 ========================
 
-This app provides a simple form asking for a few personnal pieces of information and a sratchcard game. The number of winning cases and the winning probabilities can be customized.
+This app provides a simple form asking for a few personnal appreciations of services. Every text could be customized.
 
 ## File organisation
 - `app/` : Folder who contains all application sources. 
