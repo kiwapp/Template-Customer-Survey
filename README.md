@@ -16,7 +16,7 @@ This app provides a simple form asking for a few personnal appreciations of serv
     - `./assets/` : Folder of assets as fonts...
         - `fonts/` : Appliction fonts
 - `images/` : Folder who contains all images resources. 
-- `sources/` : Folder who contains all application sources. 
+- `sources/` : Folder who contains all application sources (for modifications look at sources folder [a link]sources/README .md. 
 
 ## Dependencies
 
