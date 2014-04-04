@@ -30,7 +30,7 @@ This application is build on top of :
 
 ## About the application
 
-This application is built on top of **Backbone , Lodash and Kiwapp**, so it's working throw Ajax.
+This application is built on top of **Backbone , Lodash and Kiwapp**, so it's working throught Ajax.
 
 You will find inside this repository :
 - app/ : folder containing app sources
