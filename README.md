@@ -32,10 +32,11 @@ This application is build on top of :
 
 This application is built on top of **Backbone , Lodash and Kiwapp**, so it's working throw Ajax.
 
-You will find inside this repository :  -app/ : folder containing app sources
-                                        -images/ : folder containing images resources
-                                        -app.zip : zip file of content App folder, add this zip to your manager.
-                                        -images.zip : zip file of content image folder , like upstaire. 
+You will find inside this repository :
+- app/ : folder containing app sources
+- images/ : folder containing images resources
+- app.zip : zip file of content App folder, add this zip to your manager.
+- images.zip : zip file of content image folder , like upstaire. 
  
 ## Customize images
 
@@ -47,8 +48,9 @@ If yours do not have the same name as ours, do not forget to update the `main.cs
 
 this template give you possibility to edit every questions and text and define upload url.
 
-How to proceed: - Go to `Kiwapp Manager` and log in.
-                - Select your `Customer` 
-                - Go to `shop` section and select your shop.
-                - Select application inside your `App set` and click on the config wheel
-                - Now you could write text for each pageg and `Parse` upload config or a specifique `Url` for collect form data.
+How to proceed:
+- Go to `Kiwapp Manager` and log in.
+- Select your `Customer` 
+- Go to `shop` section and select your shop.
+- Select application inside your `App set` and click on the config wheel
+- Now you could write text for each pageg and `Parse` upload config or a specifique `Url` for collect form data.
