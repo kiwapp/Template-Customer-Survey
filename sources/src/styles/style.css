@@ -1,0 +1,335 @@
+/* fonts declaration*/
+@font-face {
+    font-weight : normal;
+    font-style  : normal;
+    font-family : 'Edmondsans-Regular';
+    src         : url('../assets/fonts/Edmondsans-Regular.otf');
+}
+
+@font-face {
+    font-weight : normal;
+    font-style  : normal;
+    font-family : 'Edmondsans-Bold';
+    src         : url('../assets/fonts/Edmondsans-Bold.otf');
+}
+
+/*Remove the colored box for android and ios webview*/
+*{
+    -webkit-tap-highlight-color:transparent !important;
+}
+
+ /*Force the main container to fullscreen*/
+body{
+    position    : absolute;
+    top         : 0;
+    right       : 0;
+    bottom      : 0;
+    left        : 0;
+    margin      : 0;
+    padding     : 0;
+    background  : white;
+}
+
+/*class globals*/
+.btn-basic,.back{
+    margin-top       : 5rem;
+    padding-top      : 0.3rem;
+    width            : 9rem;
+    height           : 3rem;
+    border           : 2px solid grey;
+    background-color : transparent;
+    text-transform   : uppercase;
+    font-family      : 'Edmondsans-Bold';
+}
+
+.btn-basic:active,.btn-basic:focus{
+    border-color     : white;
+    background-color : grey;
+    color            : white;
+}
+
+.back {
+    display       : inline;
+    margin-top    : 1.7rem;
+    margin-left   : 2rem;
+    width         : 7rem;
+    height        :2rem;
+    /*padding-top : 0.5rem;*/
+    border-color  : white;
+    color         :white;
+    text-align    : center;
+}
+
+.back:focus,.back:active{
+    border-color     : grey;
+    background-color : white;
+    color            : grey;
+}
+
+.sprite{
+    background-image: url("../../images/sprite-hotel.png");
+}
+
+.pages, .page-end{
+
+    background-size: 100% 100%;
+    width  : 100%;
+    height : 100%;
+}
+/*background de chaques pages*/
+.welcome{
+    background-image : url("../../images/01-home.png");
+}
+
+.form1{
+    background-image : url("../../images/02-question.png");
+}
+
+.form2{
+    background-image : url("../../images/03-question.png");
+}
+
+.form3{
+    background-image : url("../../images/04-question.png");
+}
+
+.form4{
+    background-image : url("../../images/05-question.png");
+}
+
+.form5{
+    background-image : url("../../images/06-question.png");
+}
+
+.formEnd, .page-end {
+    background-image : url("../../images/07-end.png");
+}
+
+.page-end::after, .page-end::before {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 55;
+    top: 0;
+    right: 0;
+    -webkit-transform: scale(.5)
+}
+
+/*.page-end::after {
+    content: url('../assets/images/right-hand.png');
+    width: 350px
+}
+
+.page-end::before {
+    content: url('../assets/images/left-hand.png');
+    left: 0
+}*/
+
+[class^="legend-"] {
+    position: absolute;
+    z-index: 50;
+    height: 164px;
+    width: 852px;
+    background-size: 100% 100%;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+.legend-step1 {
+    background-image: url('../../images/sept1.png');
+    box-shadow: 0 0 0 500px rgba(0,0,0,.3);
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.legend-step2 {
+    background-image: url('../../images/step2.png');
+    z-index: 55;
+    top: 60%
+}
+
+/*Page 1 root*/
+.containerPage1{
+    position    : absolute;
+    top         :16rem;
+    right       : 5rem;
+    width       : 19rem;
+    text-align  : center;
+    font-size   : 1.5rem;
+    font-family : "Edmondsans-Regular";
+}
+
+.containerPage1>p .containerPage1>button{
+    margin-top: 2rem;
+}
+
+button{
+    -webkit-appearance : none;
+    border             : 0 ;
+    outline-color      : transparent;
+}
+
+.btn-start{
+    margin-top : 2rem;
+    width      : 11rem;
+}
+
+/*container position for left and right align */
+.container-question-right, .container-question-left{
+    position       : absolute;
+    top            : 11rem;
+    right          : 2rem;
+    width          : 50rem;
+    height         : 27rem;
+    text-align     : center;
+    text-transform : uppercase;
+    font-family    : "Edmondsans-Bold";
+}
+
+.container-question-left{
+    left          : 2rem;
+}
+
+label{
+    float        : left;
+    margin-top   : -3.5rem;
+    margin-right : 4.5rem;
+    margin-left  : 5rem;
+    padding-top  : 3.8rem;
+    width        : 3rem;
+    height       : 8rem;
+}
+
+.label-radio-left{
+    margin-right : 5rem;
+    margin-left  : 4.5rem;
+}
+/* Radio button state selected and not*/
+.radio{
+    display               : inline-block;
+    margin-top            : 7rem;
+    width                 : 3rem;
+    height                : 3rem;
+    background-position-x : -31.1px;
+    background-position-y : -285px;
+    -webkit-appearance    : none;
+    background-color      : rgba(0,0,0,0);
+    border                : 0 ;
+    outline-color         : transparent;
+}
+
+.radio:checked{
+    background-position-x : -80.1px;
+}
+
+textarea{
+    margin-top       : 2rem;
+    padding          : 1rem;
+    width            : 44rem;
+    background-color : #eeeeee;
+    text-align       : left;
+    font-family      : "Edmondsans-Regular";
+}
+
+/* question CSS*/
+.question ,.N-question{
+    font-size   : 0.9rem;
+    font-family : "Edmondsans-Regular";
+}
+
+.question{
+    text-transform : initial;
+    font-size      : 1.5rem;
+}
+
+/*page End*/
+.container-end{
+    position   : absolute;
+    top        : 20rem;
+    left       : 2rem;
+    width      : 23rem;
+    height     : 15rem;
+    text-align : center;
+}
+.container-end>p{
+    margin      : 0 auto;
+    width       : 17rem;
+    font-size   : 1.5rem;
+    font-family : "Edmondsans-Regular";
+}
+/*Footer css*/
+.mention{
+    position  : absolute;
+    top       : 47.5rem;
+    right     : 2rem;
+    color     : grey;
+    font-size : 0.6rem;
+}
+
+/*Animation css */
+.blink{
+    -webkit-animation : bounce 0.5s ;
+}
+
+@-webkit-keyframes bounce{
+     from {opacity  : 1;}
+     25%  {opacity : 0;}
+     50%  {opacity : 1;}
+     75%  {opacity : 0;}
+     to   {opacity  : 1;}
+}
+
+.transition-in{
+    -webkit-animation : in 1s;
+}
+@-webkit-keyframes in{
+     from {opacity:0;}
+     to   {opacity: 1;}
+}
+
+.transition-out{
+    -webkit-animation : out 1s ;
+}
+@-webkit-keyframes out{
+     from {opacity:1;}
+     to   {opacity: 0;}
+}
+
+/*IPAD CSS*/
+@media screen and (min-width: 1000px) and (max-width: 1024px){
+
+    .containerPage1 {
+        right : 2.4rem;
+    }
+    form {
+        height : 10rem;
+        width  : 40rem;
+    }
+    textarea{
+        width : 35rem;
+    }
+    .container-question-right, .container-question-left {
+        width : 39rem;
+    }
+
+    .container-question-left{
+        left : 2rem;
+    }
+    .label-radio-left {
+    margin-right : 3.9rem;
+    margin-left  : 3rem;
+    }
+    label {
+        margin-top   : -3.5rem;
+        margin-right : 4rem;
+        margin-left  : 3rem;
+        padding-top  : 2.5rem;
+    }
+    .mention{
+        top : 45.5rem;
+    }
+    .container-end {
+        width : 17rem;
+    }
+}

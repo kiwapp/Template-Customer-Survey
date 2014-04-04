@@ -4,7 +4,7 @@ Template_Customer_Survey
 This app provides a simple form asking for a few personnal appreciations of services. Every text could be customized.
 
 ## File organisation
-- `app/` : Folder who contains all application sources. 
+- `app/` : Folder who contains all application ready to use sources. 
     - `./index.html` : The index file, it loads the application and dependencies
     - `./manifest.json` : Kiwapp application manifest
     - `./styles/` :
@@ -15,6 +15,8 @@ This app provides a simple form asking for a few personnal appreciations of serv
         - `vendor.min.js` : Your JavaScript dependencies
     - `./assets/` : Folder of assets as fonts...
         - `fonts/` : Appliction fonts
+- `images/` : Folder who contains all images resources. 
+- `sources/` : Folder who contains all application sources. 
 
 ## Dependencies
 
@@ -30,13 +32,14 @@ This application is build on top of :
 
 ## About the application
 
-This application is built on top of **Backbone , Lodash and Kiwapp**, so it's working throw Ajax.
+This application is built on top of **Backbone , Lodash and Kiwapp**, so it's working throught Ajax.
 
-You will find inside this repository :  -app/ : folder containing app sources
+You will find inside this repository :  -app/ : folder containing apllication ready to use sources
                                         -images/ : folder containing images resources
+                                        -sources : folder containing sources for construct application. 
                                         -app.zip : zip file of content App folder, add this zip to your manager.
                                         -images.zip : zip file of content image folder , like upstaire. 
- 
+                            
 ## Customize images
 
 You just have to replace each images of your choice inside `/images/`.

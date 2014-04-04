@@ -1,0 +1,29 @@
+{
+  "name": "Backbone boilerplate for serval",
+  "version": "1.0.2",
+  "authors": [
+    "dhoko"
+  ],
+  "description": "BackboneJS boilerplate with gulp",
+  "keywords": [
+    "boilerplate",
+    "backbone"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/js/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "normalize-css": "~2.1.3",
+    "momentjs": "~2.5.1"
+  }
+}
