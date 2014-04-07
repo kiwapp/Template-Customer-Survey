@@ -25,11 +25,10 @@ Once is done, some configuration is needed :
 
 - In the `apps`section, find your uploaded application.  
 - Then click on the gear and `edit your application`.  
-- Here you can upload resources binded to this application. Upload your `video`in an `assets/`repository.  
+- Here you can upload resources binded to this application. Upload your `images`in an `images/`repository.  
 - Once you did, go to the `shops`section, and find your `App Set`.  
 - Click on the gear to the right of your application to `Setup app`.  
-- You have an interface to customize text of each pages and write your own [Parse](https://parse.com/) class name and Id. Or you could write  your server url if you don't want to use Parse
-- Give the path to the video you previously uploaded. Here the path is `../assets/video-demo.avi`.
+- You have an interface to customize text of each pages and write your own [Parse](https://parse.com/) class name and Id. Or you could write  your server url if you don't want to use Parse.
 - Click on `Ok` button
 - The setup is done ! Test your application downloading it on a device !
 ## Dependencies
