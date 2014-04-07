@@ -6,7 +6,7 @@
      * @type {Welcome}
      */
     App.Views.Welcome = App.Views.MasterView.extend({
-        el: '#wrapper',
+        
         template: tpl('welcome'),
         events: {
             "click .welcome": "passPage"

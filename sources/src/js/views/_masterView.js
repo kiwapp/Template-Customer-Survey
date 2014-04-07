@@ -38,20 +38,13 @@
          * @returns {MasterView}
          */
          render: function () {
-
             // Find a custom context for your view
             var myContext = this.beforeRender();
 
             this.$el.html(this.template(myContext));
 
-            // There it is, we bind events to the view.
-            // this.delegateEvents();
-
             this.afterRender();
             return this;
-        
-             // Find a custom context for your view
-
         },
         /**
          * Input values changed

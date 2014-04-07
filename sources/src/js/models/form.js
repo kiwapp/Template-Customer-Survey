@@ -31,15 +31,18 @@
                         question_3:"Text question 3: customize this text for your shop on the Retail Manager",
                         question_4:"Text question 4: customize this text for your shop on the Retail Manager",
                         question_5:"Text question 5: customize this text for your shop on the Retail Manager",
-                        end:"Text end: customize go to http://retail.kiwapp.com/",
+                        end:"Text end: customize go to http://retail.kiwapp.com/"
                     };
-                    console.log(defaults_values,Kiwapp.get().shopParameters)
+
+
             var object = _.extend(defaults_values,Kiwapp.get().shopParameters);
+            
             if(object.Class_Parse_name===""||object.X_Parse_Application_Id===""||object.X_Parse_REST_API_Key===""){
                 Kiwapp.log('please go to manager and write url, X_Parse_REST_API_Key and X_Parse_Application_Id for send data to your Parse account');
-            }
+            
             // test if '-' are presents inside Parse classe name and replace by a '_' cause parse does'nt understand '-' inside url name.
             object.Class_Parse_name = object.Class_Parse_name.replace("-","_");
+            }
 
            this.TemplatesContext = object;
         },

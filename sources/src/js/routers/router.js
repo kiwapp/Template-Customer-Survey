@@ -43,7 +43,7 @@
             App.Views.Instances.form5 = new App.Views.Form5(App.Models.Instances.formModel);
             App.Views.Instances.formEnd = new App.Views.FormEnd();
 
-            Kiwapp.log("ici init router backbone!");
+            Kiwapp.log("here, backbone router init !");
         },
         /**
          * Used before every action

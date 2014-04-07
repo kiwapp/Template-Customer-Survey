@@ -16,13 +16,13 @@
          * Go to the next page
          */
         passPage: function() {
-            App.Routers.Instances.router.navigate('tutorial', {trigger: true});
+            App.Routers.Instances.router.navigate('', {trigger: true});
         },
         /**
          * Put a specific timeout on this page
          */
         afterRender: function() {
-            win.setTimeoutPage('tutorial', 10);
+            win.setTimeoutPage('', 10);
         }
     });
 

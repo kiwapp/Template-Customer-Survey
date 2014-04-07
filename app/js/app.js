@@ -101,15 +101,18 @@
                         question_3:"Text question 3: customize this text for your shop on the Retail Manager",
                         question_4:"Text question 4: customize this text for your shop on the Retail Manager",
                         question_5:"Text question 5: customize this text for your shop on the Retail Manager",
-                        end:"Text end: customize go to http://retail.kiwapp.com/",
+                        end:"Text end: customize go to http://retail.kiwapp.com/"
                     };
-                    console.log(defaults_values,Kiwapp.get().shopParameters)
+
+
             var object = _.extend(defaults_values,Kiwapp.get().shopParameters);
+            
             if(object.Class_Parse_name===""||object.X_Parse_Application_Id===""||object.X_Parse_REST_API_Key===""){
                 Kiwapp.log('please go to manager and write url, X_Parse_REST_API_Key and X_Parse_Application_Id for send data to your Parse account');
-            }
+            
             // test if '-' are presents inside Parse classe name and replace by a '_' cause parse does'nt understand '-' inside url name.
             object.Class_Parse_name = object.Class_Parse_name.replace("-","_");
+            }
 
            this.TemplatesContext = object;
         },
@@ -228,20 +231,13 @@
          * @returns {MasterView}
          */
          render: function () {
-
             // Find a custom context for your view
             var myContext = this.beforeRender();
 
             this.$el.html(this.template(myContext));
 
-            // There it is, we bind events to the view.
-            // this.delegateEvents();
-
             this.afterRender();
             return this;
-        
-             // Find a custom context for your view
-
         },
         /**
          * Input values changed
@@ -544,13 +540,13 @@
          * Go to the next page
          */
         passPage: function() {
-            App.Routers.Instances.router.navigate('tutorial', {trigger: true});
+            App.Routers.Instances.router.navigate('', {trigger: true});
         },
         /**
          * Put a specific timeout on this page
          */
         afterRender: function() {
-            win.setTimeoutPage('tutorial', 10);
+            win.setTimeoutPage('', 10);
         }
     });
 
@@ -565,7 +561,7 @@
      * @type {Welcome}
      */
     App.Views.Welcome = App.Views.MasterView.extend({
-        el: '#wrapper',
+        
         template: tpl('welcome'),
         events: {
             "click .welcome": "passPage"
@@ -627,7 +623,7 @@
             App.Views.Instances.form5 = new App.Views.Form5(App.Models.Instances.formModel);
             App.Views.Instances.formEnd = new App.Views.FormEnd();
 
-            Kiwapp.log("ici init router backbone!");
+            Kiwapp.log("here, backbone router init !");
         },
         /**
          * Used before every action
