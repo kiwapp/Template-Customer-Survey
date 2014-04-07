@@ -1,28 +1,134 @@
 Customer Survey
 =================
 
+# Kiwapp Backbone.js boilerplate
+
+A boilerplate for **backbone.js**. From [Marrow](http://mdwn.in/gh/kud/marrow) and [Serval Backbone](https://github.com/dhoko/serval-backbone).
+
+## How to install ?
+
+### Requirements
+
+- node.js
+- npm
+- bower
+
+Ok, let's run : `npm install && bower install`
+
+### Included:
+
+- A structure
+- A great compilation process via Gulp
+- Templating via lodash
+- Lo-Dash instead of underscore for performance!
+- Kiwapp.js
+- Normalize.css
+- jQuery 2.1
+- Moment.js
+- An HTTP server
+- pushState
+- some helpers
+- ... all you need to begin a great app and being happy
+
+## Helpers
+
+This application contains some helepers :
+
+- `openPage(page,delay)`
+- `resetTimeout()`
+- `tpl()`
+
+> You can view these helpers inside `src/js/bootstrap.js`.
+
+## Some tips
+
+```shell
+.
+├── GulpFile.js
+├── README.md
+├── .jshintrc
+├── .editorconfig
+├── .bowerrc
+├── bower.json
+├── build // final files
+├── config // Application config
+    └── kiwapp_config.js
+├── package.json
+└── src // where you code
+    ├── layout // Your app layout (header,footer...)
+    ├── partials // HTML partials
+    ├── styles // Your css
+    ├── assets // static files
+    └── js // Your backbone app
+        ├── app.js // $(document).ready
+        ├── bootstrap.js
+        ├── collections // http://backbonejs.org/#Collection
+        ├── models // http://backbonejs.org/#Model
+        ├── routers // http://backbonejs.org/#Router
+        └── views // http://backbonejs.org/#View
+```
+
+## Config
+
+Create a `kiwapp_config.js` inside the directory `config`
+
+Ex :
+
+```JavaScript
+Kiwapp.set({
+    appParameters : {
+        deviceType : "webbrowser",
+        osID : "webbrowser",
+        deviceIdentifier : "Guillaume Chrome"
+    },
+    shopParameters : {
+        lang : ["fr-FR","en-US"],
+        url : "http://dev-gr.procheo.fr/upload/newlook/collect/save"
+    },
+    shopInfosConfig : {
+        external_identifier : "1",
+        address1 : "2 avenue de la cristallerie",
+        zipcode : "93500",
+        phone : "0645379283",
+        name : "Procheo Dev",
+        country_id : 72, //FRANCE
+        country_name : "fr"
+    }
+});
+```
+
+
+## Development
+
+```shell
+$ gulp
+```
+
+## Production
+
+```shell
+$ gulp prod
+```
+
+It build the zip, update your manifest and aslo generate your API documention for the application.
+
+
 ## Customization
 
 ### Webservice URL
 
-In the file **build/js/app.js**
-Go At :  App.Models.FormModel
-And Remplace the url by your in url param
-
-``` Kiwapp.session().store(json, {
-                        url: "{{PUT YOUR OWN URL HERE}}",
-                        method: "POST"
-                    }).send();```
+Go to retails manager and to you app configurtion and write your Parse Rest-api-key, Application-id and Class name.
+Or you write  url to your own server.
 
 ### Change Pictures
 
-Put yours images in the folder **src/assets/images/**
+Put yours images in the folder **/images/**
 For exemple
 `02-question.png`
-Your link in your css (**build/styles/style.css**) will be :
+Your link in your css (**src/styles/style.css**) will be :
 
 `.page2{
-    background-image : url("../assets/images/02-question.png");
+    background-image : url("../../images/02-question.png");
 }`
 
 ### Change Wording
@@ -35,12 +141,12 @@ Replace the message "Thanks you for staying with us!" by "You are a amazing you 
 ### Add a question
 
 For adding a page :
- * Add his template in build/index.html in <script type="text/template" id="xxx">template</script>
- * And his class view in build/js/app.js
- * Add his references in file build/js/app.js in router class
+ * Add his template in src/partial/
+ * And his class view in src/js/views
+ * Add his references in file src/js/router/router.js 
 
 **For exemple if you want add a question 6  :**
- - Add the following lines in build/index.html
+ - Add new file in src/partial/
 ```html
 <script type="text/template" id="form6-viewtpl"><div class = "pages form6">
     <button class="back back6">back</button>
@@ -50,30 +156,30 @@ For adding a page :
         <form>
             <label class = "label-radio-left 1star" for = 'radio-1-poor' >
                 <span></span>
-                <input class = "sprite radio" value = 'poor' type='radio' name = 'question-4' id = 'radio-1-poor'></input>
+                <input class = "sprite radio" value = 'poor' type='radio' name = 'question-6' id = 'radio-1-poor'></input>
             </label>
             <label class = "label-radio-left 2star" for = 'radio-2-average' >
                 <span></span>
-                <input class = "sprite radio" value = 'average' type='radio' name = 'question-4' id = 'radio-2-average' ></input>
+                <input class = "sprite radio" value = 'average' type='radio' name = 'question-6' id = 'radio-2-average' ></input>
             </label>
             <label class = "label-radio-left 3star" for = 'radio-3-good' >
                 <span></span>
-                <input class = "sprite radio " value = 'good' type='radio' name = 'question-4' id= 'radio-3-good' = ></input>
+                <input class = "sprite radio " value = 'good' type='radio' name = 'question-6' id= 'radio-3-good' = ></input>
             </label>
             <label class = "label-radio-left 4star" for = 'radio-4-excellent' >
                 <span></span>
-                <input class = "sprite radio" value = 'excellent' type='radio' name = 'question-4' id = 'radio-4-excellent'></input>
+                <input class = "sprite radio" value = 'excellent' type='radio' name = 'question-6' id = 'radio-4-excellent'></input>
             </label>
         </form>
-        <button class="btn-basic5 btn-basic">next</button>
+        <button class="btn-basic6 btn-basic">next</button>
     </div>
 </div></script>
 ```
 
- - Dans le fichier build/js/app.js in App.Models.FormModel = Backbone.Model.extend({});
+ <!-- - Dans le fichier build/js/app.js in App.Models.FormModel = Backbone.Model.extend({}); -->
 
 1- Add the new route in routes : {}
-2- Add the router method after form5:function() :
+2- Add in src/js/router/router.js the router method after form5:function() :
 ```javascript
 /**
          * Render the page six with the question five
@@ -86,7 +192,7 @@ For adding a page :
             this.after("form6");
         },
 ```
-3- After the class
+3-create new view class
 ```javascript
 // http://backbonejs.org/#View
 (function(win, doc, App) {
@@ -95,7 +201,7 @@ For adding a page :
      * The backview for the page 6
      * @type {Page6}
      */
-    App.Views.Form5 = App.Views.MasterView.extend({
+    App.Views.Form6 = App.Views.MasterView.extend({
     });
 
 })(window, window.document, window.app || (window.app = {}));
@@ -109,12 +215,12 @@ For adding a page :
      * The backview for the page 6
      * @type {Page6}
      */
-    App.Views.Form5 = App.Views.MasterView.extend({
+    App.Views.Form6 = App.Views.MasterView.extend({
         // Use the partials/form6.html view
         template: tpl('form6'),
         events: {
             // Click on the next button
-            "click .btn-basic3": "passPage",
+            "click .btn-basic6": "passPage",
             // Click on the back button
             "click .back6": "back",
             // Click on the screen
@@ -151,27 +257,30 @@ For adding a page :
 })(window, window.document, window.app || (window.app = {}));
 ```
 
-### Remove required field
-Go in build/js/app.js
+5- Add new line inside src/js/models/form.js :
 
-En remove the test
-```
-if (this.testForm()) {
+ add new value inside defaults object with this key name : `question_6` 
 
-}
-```
- For exemple :
-in the class
-```
-App.Views.Form4 = App.Views.MasterView.extend({
-
-});
-```
-
-in the method
-```
-passPage: function() {
-
-}
+```javascript
+/**
+         * The default params and values for this model
+         */
+        
+        defaults: {
+            "appName": "Customer-survey",
+            "datetime": "",
+            "question_1": "",
+            "question_2": "",
+            "question_3": "",
+            "question_4": "",
+            "question_5": ""
+        }
 ```
 
+5- Don't forget to instantiate inside src/js/routers/router.js :
+ 
+ inside Initialize function add you new view instance and pass your model to your view.
+
+```javascript
+    App.Views.Instances.form6 = new App.Views.Form6(App.Models.Instances.formModel);
+```
