@@ -82,15 +82,16 @@ Kiwapp.set({
         deviceIdentifier : "Guillaume Chrome"
     },
     shopParameters : {
-        lang : ["fr-FR","en-US"],
-        url : "http://dev-gr.procheo.fr/upload/newlook/collect/save"
+        shopParameters : {Class_Parse_name:"Customer-survey",
+        X_Parse_Application_Id:"SsNc2beriSMghddtEc78DQ8B2GzpjOBI7Muqhjqh",
+        X_Parse_REST_API_Key:"4nVYnxxI3wukGvGYgCUPo9YO4hBqpvjdlfBI2679"}
     },
     shopInfosConfig : {
         external_identifier : "1",
-        address1 : "2 avenue de la cristallerie",
-        zipcode : "93500",
-        phone : "0645379283",
-        name : "Procheo Dev",
+        address1 : "Your shop adress",
+        zipcode : "your zipcode",
+        phone : "your phone",
+        name : "your name",
         country_id : 72, //FRANCE
         country_name : "fr"
     }
@@ -117,8 +118,8 @@ It build the zip, update your manifest and aslo generate your API documention fo
 
 ### Webservice URL
 
-Go to retails manager and to you app configurtion and write your Parse Rest-api-key, Application-id and Class name.
-Or you write  url to your own server.
+Go to retails manager, select options of your app inside your app Set and write your Parse Rest-api-key, Application-id and Class name.
+Or write url of your own server where you will send your form datas.
 
 ### Change Pictures
 
@@ -148,7 +149,6 @@ For adding a page :
 **For exemple if you want add a question 6  :**
  - Add new file in src/partial/
 ```html
-<script type="text/template" id="form6-viewtpl"><div class = "pages form6">
     <button class="back back6">back</button>
     <div class="container-question-right">
         <p class = "N-question">question 6 / 6</p>
@@ -173,12 +173,11 @@ For adding a page :
         </form>
         <button class="btn-basic6 btn-basic">next</button>
     </div>
-</div></script>
+</div>
 ```
 
- <!-- - Dans le fichier build/js/app.js in App.Models.FormModel = Backbone.Model.extend({}); -->
-
 1- Add the new route in routes : {}
+
 2- Add in src/js/router/router.js the router method after form5:function() :
 ```javascript
 /**
@@ -192,7 +191,7 @@ For adding a page :
             this.after("form6");
         },
 ```
-3-create new view class
+3- Create new view class
 ```javascript
 // http://backbonejs.org/#View
 (function(win, doc, App) {
@@ -273,7 +272,8 @@ For adding a page :
             "question_2": "",
             "question_3": "",
             "question_4": "",
-            "question_5": ""
+            "question_5": "",
+            "question_6": ""
         }
 ```
 
