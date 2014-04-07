@@ -31,6 +31,8 @@ Once is done, some configuration is needed :
 - You have an interface to customize text of each pages and write your own [Parse](https://parse.com/) class name and Id. Or you could write  your server url if you don't want to use Parse.
 - Click on `Ok` button
 - The setup is done ! Test your application downloading it on a device !
+
+
 ## Dependencies
 
 This application is build on top of :
