@@ -83,8 +83,8 @@ Kiwapp.set({
     },
     shopParameters : {
         shopParameters : {Class_Parse_name:"Customer-survey",
-        X_Parse_Application_Id:"SsNc2beriSMghddtEc78DQ8B2GzpjOBI7Muqhjqh",
-        X_Parse_REST_API_Key:"4nVYnxxI3wukGvGYgCUPo9YO4hBqpvjdlfBI2679"}
+        X_Parse_Application_Id:"your own parse app id ",
+        X_Parse_REST_API_Key:"your own parse api key"}
     },
     shopInfosConfig : {
         external_identifier : "1",
@@ -142,9 +142,9 @@ Replace the message "Thanks you for staying with us!" by "You are a amazing you 
 ### Add a question
 
 For adding a page :
- * Add his template in src/partial/
- * And his class view in src/js/views
- * Add his references in file src/js/router/router.js 
+ * Add one template in src/partial/
+ * And one class view in src/js/views
+ * Add a references in file src/js/router/router.js 
 
 **For exemple if you want add a question 6  :**
  - Add new file in src/partial/
