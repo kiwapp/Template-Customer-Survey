@@ -41,8 +41,9 @@
                 Kiwapp.log('please go to manager and write url, X_Parse_REST_API_Key and X_Parse_Application_Id for send data to your Parse account');
             
             // test if '-' are presents inside Parse classe name and replace by a '_' cause parse does'nt understand '-' inside url name.
-            object.Class_Parse_name = object.Class_Parse_name.replace("-","_");
             }
+            if(object.Class_Parse_name!==undefined)
+            object.Class_Parse_name = object.Class_Parse_name.replace("-","_");
 
            this.TemplatesContext = object;
         },
@@ -86,18 +87,28 @@
                 if(this.TemplatesContext.X_Parse_REST_API_Key!==""||
                 this.TemplatesContext.X_Parse_Application_Id!==""||
                 this.TemplatesContext.Class_Parse_name!==""){
-
-                    $.ajax({
-                                headers: {
+                    console.log(this.TemplatesContext)
+                    var parseHeader = {
                                             "X-Parse-REST-API-Key":this.TemplatesContext.X_Parse_REST_API_Key,
                                             "X-Parse-Application-Id":this.TemplatesContext.X_Parse_Application_Id,
                                             "Content-Type": "application/json"
-                                        },
-                                url: "https://api.parse.com/1/classes/"+this.TemplatesContext.Class_Parse_name+"/" ,
+                                        };
+
+                    var parseUrl = "https://api.parse.com/1/classes/"+this.TemplatesContext.Class_Parse_name+"/" ;
+                    $.ajax({
+                                headers: parseHeader,
+                                url: parseUrl ,
                                 method: "POST",
                                 data : JSON.stringify(json),
                                 error : function(request,statusText,error){
                                     Kiwapp.log("Error Parse Post");
+                                    
+                                    Kiwapp.session().store(json,{
+                                        url     : parseUrl,
+                                        headers : parseHeader,
+                                        method  : "POST"
+                                    }).send();
+
                                     Kiwapp.log(error+" "+statusText);
                                 },
                                 success : function(request,statusText,error){
