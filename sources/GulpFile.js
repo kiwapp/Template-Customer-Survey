@@ -69,6 +69,8 @@ gulp.task('styles', function() {
 gulp.task('assets', function() {
   gulp.src('./src/assets/**/*')
     .pipe(gulp.dest('./build/assets/'));
+  gulp.src('./src/assets/favicon.png')
+    .pipe(gulp.dest('./build/'));
 });
 
 // Move your public directory to build
